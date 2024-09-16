@@ -22,7 +22,7 @@ namespace Exercise2
             //skriva ut utan radbrytning!
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(userInput);
+                Console.Write(userInput);
             }
 
             Console.WriteLine();

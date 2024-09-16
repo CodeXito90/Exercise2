@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Exercise2
+
 {
     //Menyval 1 kommer innehålla 2 klasser för alternativ 1 och 2 i huvudymenyn, vi börjar med 
     //val 1
@@ -21,24 +22,21 @@ namespace Exercise2
 
             if (int.TryParse(userAge, out age)) 
             {
-               if (age <= 5 || age > 100)
+                if (age <= 5 || age > 100)
                 {
                     Console.WriteLine("Grattis inträde!");
                 }
-
-                if (age >= 6 && age <= 20)
+                else if (age >= 6 && age < 20)
                 {
                     Console.WriteLine("Ungdomspris: 80kr");
                 }
-
-                else if (age > 64 && age <= 100 )
-                { 
-                    Console.WriteLine("Pensionär pris: 90kr"); 
+                else if (age > 64 && age <= 100)
+                {
+                    Console.WriteLine("Pensionär pris: 90kr");
                 }
-               
-                else if(age >= 20 && age <= 63)
-                { 
-                    Console.WriteLine("Standard pris: 120kr"); 
+                else if (age >= 20 && age <= 63)
+                {
+                    Console.WriteLine("Standard pris: 120kr");
                 }
             }
 
@@ -51,7 +49,7 @@ namespace Exercise2
 
         public static void Val2()
         {
-            //Här ska användaren ange hur många personer dem är, vår if statement tar då han om
+            //Här ska användaren ange hur många personer dem är, vår if statement tar då hand om
             //logiken för hur mycket total kostnaden kommer bli
             Console.WriteLine("Ange antal personer i sällskapet");
             
@@ -65,15 +63,15 @@ namespace Exercise2
                 {
                     Console.Write($"Ange åldern för person {i}: ");
                     string inputAge = Console.ReadLine();
-                    int age;
+                    int age =0;
 
                     if (int.TryParse(inputAge, out age))
                     {
-                        if (age < 5 || age > 100) 
+                        if (age <= 5 || age > 100)
                         {
                             totalCost += 0; // grattis för barn och 100+ pensionärer
                         }
-                        if (age >= 5 && age <= 20)
+                        else if (age >= 6 && age < 20)
                         {
                             totalCost += 80; // Ungdomspris
                         }
@@ -81,7 +79,7 @@ namespace Exercise2
                         {
                             totalCost += 90; // Pensionärspris
                         }
-                        else if (age >= 20 && age <= 63);
+                        else if (age >= 20 && age <= 63) // Removed the semicolon
                         {
                             totalCost += 120; // Standardpris
                         }

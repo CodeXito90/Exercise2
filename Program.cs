@@ -21,7 +21,7 @@
 
                 string userSelection = Console.ReadLine();
 
-                // Switch statement som kommer ta hand om all user input, metoderna för menyval1 och 2
+                // Switch statement som kommer ta hand om all user input, metoderna för menyval 1 och 2
                 // är skapade i 2 olika klass filer, 
                 switch (userSelection)
                 {
